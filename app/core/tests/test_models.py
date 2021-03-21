@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
+from core.models import ProfileFeedItem
+
 
 class ModelTest(TestCase):
     """Tests User Database"""
@@ -53,3 +55,21 @@ class ModelTest(TestCase):
 
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
+
+    def test_user_status_updated(self):
+        """Test user status updated successfully"""
+
+        user = get_user_model().objects.create_user(
+            email="test@user.com",
+            name="test user",
+            password="testuserpass"
+        )
+
+        status_text = "Hello World"
+
+        ProfileFeedItem.objects.create(
+            user_profile=user,
+            status_text=status_text
+        )
+
+        self.assertEqual(user.profile_feeds.count(), 1)
