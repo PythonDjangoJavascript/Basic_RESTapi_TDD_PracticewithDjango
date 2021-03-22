@@ -1,8 +1,120 @@
 {
-    "python.linting.banditEnabled": false,
-    "python.linting.flake8Enabled": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Enabled": false,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.pylamaEnabled": false,
-    "python.analysis.extraPaths": ["./app"]
+    "python.analysis.extraPaths": [
+        "./app"
+    ],
+    "python.pythonPath": "/usr/local/bin/python"
 }
+
+// {
+//     "python.pythonPath": "/usr/bin/python",
+//     "python.linting.enabled": true,
+//     // "python.linting.pylintEnabled": true,
+//     "atomKeymap.promptV3Features": true,
+//     "editor.multiCursorModifier": "ctrlCmd",
+//     "editor.formatOnPaste": true,
+//     "editor.fontSize": 17,
+//     "workbench.iconTheme": "material-icon-theme",
+//     "files.autoSave": "onFocusChange",
+//     "python.experiments.optInto": [
+    
+//     ],
+//     // "python.linting.pylintArgs": [
+//     //     "--load-plugins=pylint_django"
+//     // ],
+//     // "python.linting.pylintArgs": [
+//     //     "--disable=C0111", // missing docstring
+//     //     "--load-plugins=pylint_django,pylint_celery",
+//     // ],
+//     // "python.linting.pylintArgs": [
+//     //     "--disable=C0111",
+//     //     "--load-plugins",
+//     //     "pylint_django"
+//     // ],
+
+//     "[python]": {
+    
+        
+
+
+
+        
+
+
+
+//         "gitlens.codeLens.symbolScopes": [
+//             "!Module"
+//         ]
+//     },
+//     "django.snippets.exclude": [
+
+//         "cms",
+//         "wagtail"
+//     ],
+//     "files.associations": {
+//         "**/*.html": "html",
+//         "**/templates/**/*.html": "django-html",
+//         "**/templates/**/*": "django-txt",
+//         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+//     },
+//     "emmet.includeLanguages": {
+//         "django-html": "html"
+//     },
+//     "python.linting.banditEnabled": true,
+//     "python.linting.pylintPath": "pylint",
+//     // "python.linting.pylintPath": "pylint_django",
+//     "settingsSync.ignoredExtensions": [
+    
+//     ],
+//     "settingsSync.ignoredSettings": [
+    
+//     ],
+//     "editor.suggestSelection": "first",
+//     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+//     "python.languageServer": "Pylance",
+//     "kite.showWelcomeNotificationOnStartup": false,
+//     "editor.formatOnSave": true,
+//     "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+//     "tabnine.experimentalAutoImports": true,
+//     "[javascript]": {
+//         "editor.defaultFormatter": "vscode.typescript-language-features"
+//     },
+//     "[html]": {
+//         "editor.defaultFormatter": "vscode.html-language-features"
+//     },
+//     "workbench.editorAssociations": [
+//         {
+//             "viewType": "jupyter.notebook.ipynb",
+//             "filenamePattern": "*.ipynb"
+//         }
+//     ],
+//     "workbench.colorTheme": "Palenight Italic",
+//     "bracketPairColorizer.activeScopeCSS": [
+//         "borderStyle : solid",
+//         "borderWidth : 1px",
+//         "borderColor : {color}; opacity: 0.5"
+//     ],
+//     "bracketPairColorizer.scopeLineCSS": [
+
+//         "borderStyle : solid",
+//         "borderWidth : 1px",
+//         "borderColor : {color}; opacity: 0.5"
+//     ],
+//     "bracketPairColorizer.excludedLanguages": [
+    
+//     ],
+//     "bracketPairColorizer.independentPairColors": [],
+//     "bracketPairColorizer.highlightActiveScope": true,
+//     "editor.rulers": [
+//         80
+//     ],
+
+//     "workbench.colorCustomizations": {
+//     "editorRuler.foreground": "#4c2b97"
+//     }
+    
+// }
