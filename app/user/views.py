@@ -7,6 +7,8 @@ from rest_framework import viewsets
 
 from user import serializers
 
+from core.models import User
+
 
 # This just to understand the sceleton of APIView
 class HelloAPIView(APIView):
@@ -135,3 +137,10 @@ class HelloViewSet(viewsets.ViewSet):
         return Response({
             "hettp_method": "DELETE"
         })
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """Handle creating and updating user profiles"""
+
+    serializer_class = serializers.UserProfileSerializser
+    queryset = User.objects.all()
