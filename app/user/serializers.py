@@ -1,5 +1,6 @@
-from rest_framework import serializers
+from rest_framework import fields, serializers
 from core.models import User
+from core.models import ProfileFeedItem
 
 
 class HelloApiSerializer(serializers.Serializer):
@@ -22,7 +23,8 @@ class UserProfileSerializser(serializers.ModelSerializer):
         extra_kwargs = {
             "password": {
                 "write_only": True,
-                "style": {"input_type": "password"}
+                "style": {"input_type": "password"},
+                "min_length": 5
             }
         }
 
@@ -36,3 +38,21 @@ class UserProfileSerializser(serializers.ModelSerializer):
             )
 
             return user
+
+        # def create(self, validated_data):
+        #     return User.objects.create_user(**validated_data)
+
+
+class ProfileFeedSerializer(serializers.ModelSerializer):
+    """Serializes users feed Item"""
+
+    class Meta:
+        model = ProfileFeedItem
+        fields = (
+            "user_profile",
+            "status_text",
+            "created_on"
+        )
+
+        extra_kwargs = {
+            "user_profile":}
