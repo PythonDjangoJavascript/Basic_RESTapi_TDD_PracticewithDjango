@@ -8,9 +8,11 @@ from rest_framework import viewsets
 from user import serializers
 
 from core.models import User
-
+from core.models import ProfileFeedItem
 
 # This just to understand the sceleton of APIView
+
+
 class HelloAPIView(APIView):
     """This is to test how we can use APIView in ouer API"""
     """We can define get, post, put, patch and delete http request here"""
@@ -144,3 +146,10 @@ class UserViewSet(viewsets.ModelViewSet):
 
     serializer_class = serializers.UserProfileSerializser
     queryset = User.objects.all()
+
+
+class UserFeedSet(viewsets.ModelViewSet):
+    """Handle Creating and updating user profiles"""
+
+    serializer_class = serializers.ProfileFeedSerializer
+    queryset = ProfileFeedItem.objects.all()

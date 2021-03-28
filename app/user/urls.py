@@ -8,7 +8,8 @@ app_name = 'user'
 
 router = DefaultRouter()
 router.register("hello-viewset", views.HelloViewSet, basename="hello-viewset")
-router.register("profile", views.UserViewSet)
+router.register("profile", views.UserViewSet, basename="profile")
+router.register("newsfeed", views.UserFeedSet, basename="feed")
 
 
 urlpatterns = [
